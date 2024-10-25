@@ -40,7 +40,7 @@ analyze:
       enabled: true
 ```
 
-5. From the Polaris UI, [create an application](https://polaris.synopsys.com/developer/default/polaris-documentation/t_gs-app-superuser) and assign SAST and SCA subscriptions. Note: application name must match what is defined in the workflow, e.g. polaris-github-lab-java ← **replace my name with your name**
+5. From the Polaris UI, [create an application](https://polaris.synopsys.com/developer/default/polaris-documentation/t_gs-app-superuser) and assign SAST and SCA subscriptions. Note: application name must match what is defined in the workflow, e.g. polaris-github-lab-java
 6. Create a new workflow. _GitHub → Project → Actions → New Workflow → Setup a workflow yourself_ **Milestone 2** :heavy_check_mark:
 
 ```
