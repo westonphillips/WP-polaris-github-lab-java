@@ -16,8 +16,8 @@ This repository contains everything you need to complete the lab except for the 
 # Clone repository
 
 1. Clone this repository into your GitHub account. _GitHub → New → Import a Repository_ **Milestone 1** :heavy_check_mark:
-   - enter https://github.com/chuckaude/sig-integrations-lab1.git
-   - enter repository name, e.g. hello-java
+   - enter https://github.com/itsnotjason/polaris-github-lab-java.git
+   - enter repository name, e.g. polaris-github-lab-java
    - leave as public (required for GHAS on free accounts)
 
 # Setup workflow
@@ -40,7 +40,7 @@ analyze:
       enabled: true
 ```
 
-5. From the Polaris UI, [create an application](https://polaris.synopsys.com/developer/default/polaris-documentation/t_gs-app-superuser) and assign SAST and SCA subscriptions. Note: application name must match what is defined in the workflow, e.g. chuckaude-hello-java ← **replace my name with your name**
+5. From the Polaris UI, [create an application](https://polaris.synopsys.com/developer/default/polaris-documentation/t_gs-app-superuser) and assign SAST and SCA subscriptions. Note: application name must match what is defined in the workflow, e.g. polaris-github-lab-java ← **replace my name with your name**
 6. Create a new workflow. _GitHub → Project → Actions → New Workflow → Setup a workflow yourself_ **Milestone 2** :heavy_check_mark:
 
 ```
@@ -71,7 +71,7 @@ jobs:
         polaris_server_url: ${{ vars.POLARIS_SERVERURL }}
         polaris_access_token: ${{ secrets.POLARIS_ACCESSTOKEN }}
         polaris_assessment_types: 'SAST,SCA'
-        polaris_application_name: chuckaude-${{ github.event.repository.name }}
+        polaris_application_name: ${{ github.event.repository.name }}
         polaris_project_name: ${{ github.event.repository.name }}
         polaris_prComment_enabled: 'true'
         polaris_reports_sarif_create: 'true'
