@@ -1,4 +1,4 @@
-# Black Duck Polaris - GitHub Action Lab
+# Black Duck Polaris - GitHub Action Lab (Lab #2)
 
 The goal of this lab is to provide hands on experience configuring a Polaris workflow in GitHub and viewing the results. As part of the lab, we will:
 - execute a full scan, viewing the results in the Polaris UI
@@ -104,3 +104,7 @@ jobs:
 # Congratulations
 
 You have now configured a Polaris workflow in GitHub and demonstrated all the current post-scan CI features. :clap: :trophy:
+
+# CTF (Optional)
+
+Capture the value from the secret and assemble a 3 part sentance in order. 
