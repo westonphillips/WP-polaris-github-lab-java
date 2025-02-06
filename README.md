@@ -105,4 +105,4 @@ You have now configured a Polaris workflow in GitHub and demonstrated all the cu
 
 # CTF (Optional)
 
-Capture the value from the secret and assemble a 3 part sentance in order. 
+Once you successfully run the scan, in the security tab from GitHub you will see a "Use of Hard-coded Credentials" finding. Locate the secret, and decrypt it. Add this to the first labs decrypted secret. 
