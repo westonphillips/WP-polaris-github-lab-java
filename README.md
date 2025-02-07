@@ -18,7 +18,7 @@ This repository contains everything you need to complete the lab except for the 
 ## CLONE REPOSITORY
 ![](https://img.shields.io/badge/steps-blueviolet?style=for-the-badge)
 1. Clone this repository into your GitHub account. _GitHub → New → Import a Repository_ **Milestone 1** :heavy_check_mark:
-   - enter https://github.com/itsnotjason/polaris-github-lab-java.git
+   - enter https://github.com/itsnotjason/polaris-github-lab-java
    - enter repository name, e.g. polaris-github-lab-java
    - leave as public (required for GHAS on free accounts)
 
