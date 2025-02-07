@@ -10,8 +10,10 @@ This repository contains everything you need to complete the lab except for the 
 
 ## $\textsf{\color{#800080}{Prerequisites}}$
 1. [signup](https://github.com/signup) for a free GitHub Account
-2. [create](https://polaris.blackduck.com/developer/default/polaris-documentation/t_make-token) a Polaris Access Token
-
+2. [create](https://polaris.blackduck.com/developer/default/polaris-documentation/t_make-token) a Polaris Access Token 
+> [!NOTE]  
+> Please store your access token somewhere safe. We will use again in subsequent labs
+> 
 
 ## CLONE REPOSITORY
 ![](https://img.shields.io/badge/steps-blueviolet?style=for-the-badge)
