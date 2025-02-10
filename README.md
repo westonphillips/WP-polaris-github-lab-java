@@ -99,18 +99,18 @@ jobs:
 1. Monitor your workflow run and wait for scan to complete. _GitHub → Project → Actions → Polaris → Most recent workflow run → Polaris_
    - Note that scan completes, and the workflow passes. This is because the default policy is notify on critical & high issues.
 2. From the Polaris UI, [create a policy](https://polaris.blackduck.com/developer/default/polaris-documentation/t_post_scan_policies) that breaks the build and assign it to your project.
-3. Rerun workflow, and once it completes, select _Summary_ in upper left to see policy enforcement and a failed workflow. **Milestone 3** :heavy_check_mark:
-4. View findings in GitHub Advanced Security tab _GitHub → Project → Security → Code scanning_ **Milestone 4** :heavy_check_mark:
+3. Rerun workflow, and once it completes, select _Summary_ in upper left to see policy enforcement and a failed workflow.
+4. View findings in GitHub Advanced Security tab _GitHub → Project → Security → Code scanning
 
 
 ## PR SCAN
 ![](https://img.shields.io/badge/steps-blueviolet?style=for-the-badge)
-1. Edit pom.xml _GitHub → Project → Code → pom.xml → Edit pencil icon upper right_
+1. Edit pom.xml GitHub → Project → Code → pom.xml → Edit pencil icon upper right
    - change log4j version from 2.14.1 to 2.15.0
-3. Click on _Commit Changes_, select create a **new branch** and start a PR
+3. Click on Commit Changes, select create a **new branch** and start a PR
 4. Review changes and click on _Create Pull Request_
-5. Monitor workflow run _GitHub → Project → Actions → Polaris → Most recent workflow run → Polaris_
-6. Once workflow completes, navigate back to PR and see PR comment **Milestone 5** :heavy_check_mark: _GitHub → Project → Pull requests
+5. Monitor workflow run GitHub → Project → Actions → Polaris → Most recent workflow run → Polaris
+6. Once workflow completes, navigate back to PR and see PR comment GitHub → Project → Pull requests
 
 
 # Congratulations
