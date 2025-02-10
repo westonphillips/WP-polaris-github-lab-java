@@ -49,7 +49,7 @@ analyze:
       enabled: true
 ```
 
-4. We are now going to create a new GitHub Action workflow. Below you will see a template that you can copy and past and use as your workflow. This utilizes the Black Duck Security Scan GitHub Action.  
+4. We are now going to create a new GitHub Action workflow. Below you will see a template that you can copy and paste and use as your workflow. This utilizes the Black Duck Security Scan GitHub Action.  
 
    The code below will works as is, but for our lab we need to make a change.  Under ### SCANNING: Optional fields, change <ins>**polaris_application_name**</ins> value to match the application name you created in the previous labs. Leave the project name as-is and this will add it to your application as a second project in Polaris.
 
