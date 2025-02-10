@@ -17,20 +17,25 @@ This repository contains everything you need to complete the lab except for the 
 
 ## CLONE REPOSITORY
 ![](https://img.shields.io/badge/steps-blueviolet?style=for-the-badge)
-1. Clone this repository into your GitHub account. _GitHub → New → Import a Repository_ **Milestone 1** :heavy_check_mark:
+1. Clone this repository into your GitHub account. From the top GitHub Menu → [ + ] New → Import a Repository
    - enter https://github.com/itsnotjason/polaris-github-lab-java
-   - enter repository name, e.g. polaris-github-lab-java
+   - enter repository name, First Initial + Last Initial-polaris-github-lab-java (ie. FL-polaris-github-lab-java
+   - no username or access token is required to clone
    - leave as public (required for GHAS on free accounts)
 
 
 ## SETUP WORKFLOW
 ![](https://img.shields.io/badge/steps-blueviolet?style=for-the-badge)
-1. Confirm GITHUB_TOKEN has workflow read & write permissions. _GitHub → Project → Settings → Actions → General → Workflow Permissions_
-2. Confirm all GitHub Actions are allowed. _GitHub → Project → Settings → Actions → General → Actions Permissions_
-3. Add the following variables, adding POLARIS_ACCESSTOKEN as a **secret**. _GitHub → Project → Settings → Secrets and Variables → Actions_
-   - POLARIS_SERVERURL
-   - POLARIS_ACCESSTOKEN
-4. Add a coverity.yaml to the project repository. _GitHub → Project → Add file → Create new file_
+1. Go to  GitHub → Project → Settings → Actions → General and confirm that Actions permissions are set to "Allow all actions and reusuable workflows" and Workflow permissions are set to "Read and write permissions"
+2. Go to GitHub → Project → Settings → Secrets and Variables → Actions and add the following variables:
+ 
+   Under Secrets, add New Repository Secret
+   - For the name add POLARIS_ACCESSTOKEN and for Secret* value add your Polaris access token
+
+   Under Variables, add New Repository Variable  
+   - For the name add POLARIS_SERVERURL and for the Value* add your Polaris server URL (i.e https://polaris.blackduck.com)
+
+3. In your root folder, a coverity.yaml file has been added. Polaris can do buildless scans, but to get a higher fidelity scan this yaml file tells Polaris how to build the application and it can also be used to pass additional scan instructions. For this lab, simply verify it exists in your root folder. 
 
 ```
 capture:
@@ -43,8 +48,14 @@ analyze:
       enabled: true
 ```
 
-5. From the Polaris UI, [create an application](https://polaris.blackduck.com/developer/default/polaris-documentation/t_gs-app-superuser) and assign SAST and SCA subscriptions. Note: application name must match what is defined in the workflow, e.g. polaris-github-lab-java
-6. Create a new workflow. _GitHub → Project → Actions → New Workflow → Setup a workflow yourself_ **Milestone 2** :heavy_check_mark:
+5. Typically the application and project name are auto populated using your GitHub repository but we are going to overide this for the sake of this lab. From the Polaris UI, [create an application](https://polaris.blackduck.com/developer/default/polaris-documentation/t_gs-app-superuser) and assign SAST and SCA subscriptions.
+
+> [!NOTE]  
+>application name must match what is defined in the workflow, ie. FL-polaris-github-lab-java
+
+4. We are now going to create a new GitHub Action workflow. Below you will see a template that you can copy and past and use as your workflow. This utilizes the Black Duck Security Scan GitHub Action.  It works as is, but you will need to change the value in the workflow  <ins>**polaris_application_name**</ins>, to match the application name you created in the previous labs. This will add it to your application as a second project.
+
+Go to, GitHub → Project → Actions → New Workflow → Setup a workflow yourself
 
 ```
 # example workflow for Polaris scans using the Black Duck Action
@@ -71,7 +82,7 @@ jobs:
           polaris_assessment_types: "SCA,SAST"
           
           ### SCANNING: Optional fields
-          polaris_application_name: ${{ github.event.repository.name }}
+          polaris_application_name: 
           polaris_project_name: ${{ github.event.repository.name }}
           
           ### PULL REQUEST COMMENTS: Uncomment below to enable
