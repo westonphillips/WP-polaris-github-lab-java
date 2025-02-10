@@ -84,12 +84,12 @@ jobs:
           polaris_project_name: ${{ github.event.repository.name }}
           
           ### PULL REQUEST COMMENTS: Uncomment below to enable
-          # polaris_prComment_enabled: true 
-          # github_token: ${{ secrets.GITHUB_TOKEN }} # Required when PR comments is enabled
+          polaris_prComment_enabled: true 
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Required when PR comments is enabled
 
           ### SARIF report parameters
-          #polaris_reports_sarif_create: true
-          #polaris_upload_sarif_report: true
+          polaris_reports_sarif_create: true
+          polaris_upload_sarif_report: true
           
           ### Signature scan
           #polaris_test_sca_type: "SCA-SIGNATURE"
