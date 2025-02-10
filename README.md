@@ -48,14 +48,11 @@ analyze:
       enabled: true
 ```
 
-5. Typically the application and project name are auto populated using your GitHub repository but we are going to overide this for the sake of this lab. From the Polaris UI, [create an application](https://polaris.blackduck.com/developer/default/polaris-documentation/t_gs-app-superuser) and assign SAST and SCA subscriptions.
+4. We are now going to create a new GitHub Action workflow. Below you will see a template that you can copy and past and use as your workflow. This utilizes the Black Duck Security Scan GitHub Action.  
 
-> [!NOTE]  
->application name must match what is defined in the workflow, ie. FL-polaris-github-lab-java
+   The code below will works as is, but for our lab we need to make a change.  Under ### SCANNING: Optional fields, change <ins>**polaris_application_name**</ins> value to match the application name you created in the previous labs. Leave the project name as-is and this will add it to your application as a second project in Polaris.
 
-4. We are now going to create a new GitHub Action workflow. Below you will see a template that you can copy and past and use as your workflow. This utilizes the Black Duck Security Scan GitHub Action.  It works as is, but you will need to change the value in the workflow  <ins>**polaris_application_name**</ins>, to match the application name you created in the previous labs. This will add it to your application as a second project.
-
-Go to, GitHub → Project → Actions → New Workflow → Setup a workflow yourself
+   Go to, GitHub → Project → Actions → New Workflow → Setup a workflow yourself
 
 ```
 # example workflow for Polaris scans using the Black Duck Action
