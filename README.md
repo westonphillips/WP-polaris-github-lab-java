@@ -26,7 +26,11 @@ This repository contains everything you need to complete the lab except for the 
 
 ## SETUP WORKFLOW
 ![](https://img.shields.io/badge/steps-blueviolet?style=for-the-badge)
-1. Go to  GitHub → Project → Settings → Actions → General and confirm that Actions permissions are set to "Allow all actions and reusuable workflows" and Workflow permissions are set to "Read and write permissions" and click the box to "Allow GitHub Actions to create and approve pull requests" and click save.
+1. Go to  GitHub → Project → Settings → Actions → General:
+   - confirm that Actions permissions are set to "Allow all actions and reusuable workflows"
+   - set Workflow permissions to "Read and write permissions"
+   - click the box to "Allow GitHub Actions to create and approve pull requests"
+   - click save
 
 2. Go to GitHub → Project → Settings → Secrets and Variables → Actions and add the following variables:
  
