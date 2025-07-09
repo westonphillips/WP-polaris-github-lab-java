@@ -27,12 +27,15 @@ This repository contains everything you need to complete the lab except for the 
 ## SETUP WORKFLOW
 ![](https://img.shields.io/badge/steps-blueviolet?style=for-the-badge)
 1. Go to  GitHub → Project → Settings → Actions → General:
+
+![image](https://github.com/user-attachments/assets/f9581fd8-51cc-4f92-8aa8-5b064820610e)
+
    - confirm that Actions permissions are set to "Allow all actions and reusuable workflows"
    - set Workflow permissions to "Read and write permissions"
    - click the box to "Allow GitHub Actions to create and approve pull requests"
    - click save
 
-2. Go to GitHub → Project → Settings → Secrets and Variables → Actions and add the following variables:
+3. Go to GitHub → Project → Settings → Secrets and Variables → Actions and add the following variables:
  
    Under Secrets, add New Repository Secret
    - For the name add POLARIS_ACCESSTOKEN and for Secret* value add your Polaris access token
@@ -40,7 +43,7 @@ This repository contains everything you need to complete the lab except for the 
    Under Variables, add New Repository Variable  
    - For the name add POLARIS_SERVERURL and for the Value* add your Polaris server URL (i.e https://polaris.blackduck.com)
 
-3. In your root folder, a coverity.yaml file has been added. Polaris can do buildless scans, but to get a higher fidelity scan this yaml file tells Polaris how to build the application and it can also be used to pass additional scan instructions. For this lab, simply verify it exists in your root folder. 
+4. In your root folder, a coverity.yaml file has been added. Polaris can do buildless scans, but to get a higher fidelity scan this yaml file tells Polaris how to build the application and it can also be used to pass additional scan instructions. For this lab, simply verify it exists in your root folder. 
 
 ```
 capture:
