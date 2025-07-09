@@ -18,7 +18,7 @@ This repository contains everything you need to complete the lab except for the 
 ## CLONE REPOSITORY
 ![](https://img.shields.io/badge/steps-blueviolet?style=for-the-badge)
 1. Clone this repository into your GitHub account. From the top GitHub Menu → [ + ] New → Import a Repository
-   - enter https://github.com/bma01810/BD-Polaris-CTF2-GitHub-Lab-Java
+   - enter https://github.com/bma-code/BD-Polaris-CTF2-GitHub-Lab-Java
    - enter repository name, First Initial + Last Initial-polaris-github-lab-java (ie. FL-polaris-github-lab-java
    - no username or access token is required to clone
    - leave as public (required for GHAS on free accounts)
