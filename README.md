@@ -114,7 +114,7 @@ jobs:
 ![](https://img.shields.io/badge/steps-blueviolet?style=for-the-badge)
 1. Edit pom.xml GitHub → Project → Code → pom.xml → Edit pencil icon upper right
    - change log4j version from 2.14.1 to 2.15.0
-3. Click on Commit Changes, select create a **new branch** and start a PR and click Propose Change
+3. Click on Commit Changes, select create a **new branch** and start a PR by clicking Propose Change
 4. Review changes and click on _Create Pull Request_
 5. Monitor workflow run GitHub → Project → Actions → Polaris → Most recent workflow run → Polaris
 6. Once workflow completes, navigate back to PR and see PR comment GitHub → Project → Pull requests
