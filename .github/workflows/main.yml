@@ -22,8 +22,8 @@ jobs:
           polaris_assessment_types: "SCA,SAST"
           
           ### SCANNING: Optional fields
-          polaris_application_name: 
-          polaris_project_name: WP-hellojava
+          polaris_application_name: WP-hellojava
+          polaris_project_name: ${{ github.event.repository.name }}
           
           ### PULL REQUEST COMMENTS: Uncomment below to enable
           polaris_prComment_enabled: true 
